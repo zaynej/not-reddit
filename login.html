@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-signin-client_id" content="923418922396-b96002fbb60it087qht5u97mntlbca1h.apps.googleusercontent.com">
+    <title>Welcome to Not Reddit</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.6.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.6.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.6.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.6.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.6.1/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  </head>
+  
+  <body>
+<!--Login Page-->
+ <div id="page1">
+        <h1> This is Not Reddit</h1>
+        <br>
+        <br>
+        <br>
+
+<form action="action_page.php" method="post">
+
+    <div class="container" style="background-color: rgba(0,0,0,.25);
+                                  box-shadow: 9px 5px 20px 0px black;">
+        <p> Please Login</p>
+        
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <br><br>
+        
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <br><br>
+        
+        <br><br>
+        <button type="submit">Submit</button>
+    
+        <a href="nrnewacct.html">Create an Account</a>
+        
+        <br>
+<div id="my-signin2"></div></div> 
+      
+      <script>
+          function onSuccess(googleUser) {
+                  console.log('Logged in as: ' + googleUser.getBasicProfile().getName()
+                  );
+                }
+            
+                function onFailure(error) {
+                  console.log(error);
+                }
+                function renderButton() {
+                  gapi.signin2.render('my-signin2', {
+                    'scope': 'profile email',
+                    'width': 240,
+                    'height': 50,
+                    'longtitle': true,
+                    'theme': 'dark',
+                    'onsuccess': onSuccess,
+                    'onfailure': onFailure
+                  });
+                }
+      </script>
+            <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
+</form> 
+ <!--Homepage-->
+ <div class= hidden id="page2">
+    <br><br>
+    <p>This is the homepage</p>
+</div>
+ <ul>
+     
+  <li><a class="active" href="#home">This is Not Reddit</a></li>
+  <li><a href="#welcome">Welcome</a></li>
+  <li style="float:right"><a class="active" href="#CreatePost">Create Post</a></li>
+ 
+ </ul>    
+    
+
+		<br>
+		<br>
+		<br>
+    
+    
+    <button onclick="CreatePost()">Create New Post</button>
+      <script>
+        function CreatePost() {
+          
+        }
+        </script>
+
+ </div>
+
+       <script src="nrscript.js"></script>
+  </body>
+  
+</html>
+
+
