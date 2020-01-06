@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="google-signin-client_id" content="923418922396-b96002fbb60it087qht5u97mntlbca1h.apps.googleusercontent.com">
+<meta name="description" content="NotReddit Create Account"/>
+<meta name="author" content="Zayne J"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<!--link rel="stylesheet" href="nrnewacctstyle.css"/-->
+<title> Create an Account> </title>
+<script defer src="/__/firebase/7.6.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.6.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.6.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.6.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.6.1/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<!--script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script-->
+
+</head>
+<body>
+<script>
+  function(){
+    let registration = function(){
+          $("body").html(`
+        <form action="" method="POST" id="registrationform">
+            <h1>Welcome to Not Reddit</h1>
+        		<p>Enter your details to create an account.</p>
+        		<br> 
+        		
+            <div class="alert">Message Sent</div>
+            <fieldset><label for="uname"><b>Username</b></label><input type="text" placeholder="Enter Username" name="uname" required>
+        <br><br>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <br><br>
+            <label class="" for="email">Email:</label>
+            <input type="email" placeholder="Enter Email" name="email" value="" id="email" required /> 
+            </fieldset>
+        <!--sumbitting should create account details based on the input and take the user to the homepage-->
+        <button id="submit">Register</button>
+        `);
+        $("#submit").on("click", function(){
+          window.location.replace("https://not-reddit-1aad3.firebaseapp.com/nrhomepage.html")
+        })
+        }
+      }
+  </script>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+</body>
+</html>
